@@ -1,3 +1,11 @@
+## Screenshots
+
+| Login Screen                           | Registration Screen                          |
+|----------------------------------------|---------------------------------------------|
+| ![Login Screen1](assets/images/screenshot2.png) | ![Home Screen1](assets/images/screenshot.png)|
+
+
+
 # Flutter Firebase Authentication App
 
 Bu proje, Flutter ve Firebase kullanarak bir kullanıcı kayıt ve giriş uygulaması geliştirmek için hazırlanmıştır. Firebase Authentication, Firestore, Firecloud gibi Firebase servisleri kullanılarak basit ve etkili bir giriş sistemi oluşturulmuştur.
