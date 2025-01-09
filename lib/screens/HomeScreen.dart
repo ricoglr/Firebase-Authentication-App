@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../forms/login_form.dart';
 import '../forms/register_form.dart';
 
-
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
 
@@ -18,7 +17,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Flutter Firebase Demo"),
+        title: const Text("Flutter Firebase Login & Register'"),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -46,12 +45,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Anasayfa"),
+        title: const Text("Home Page"),
         centerTitle: true,
       ),
       body: const Center(
         child: Text(
-          "Hoşgeldiniz! Başarılı bir şekilde giriş yaptınız.",
+          "Welcome! You are logged in.",
           style: TextStyle(fontSize: 18),
           textAlign: TextAlign.center,
         ),

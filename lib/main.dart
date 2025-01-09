@@ -3,7 +3,6 @@ import 'package:firebase_core/firebase_core.dart';
 
 import 'screens/HomeScreen.dart';
 
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false, // Debug yazısını kaldırır
-      title: 'Flutter Firebase Demo',
+      title: 'Flutter Firebase Login & Register',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,

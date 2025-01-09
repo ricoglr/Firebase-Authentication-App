@@ -26,35 +26,36 @@ class _RegisterFormState extends State<RegisterForm> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const CustomTitle(title: "Kayıt Bölgesi"),
+        const CustomTitle(title: "Register"),
         const SizedBox(height: 40),
         CustomTextField(
           controller: emailController,
           label: "E-posta",
-          hint: "E-posta adresiniz girin",
+          hint: "Please enter your email",
           prefixIcon: const Icon(Icons.text_fields),
           suffixIcon: const Icon(Icons.clear),
-          helperText: 'Özel karakter kullanmayın',
+          helperText: 'Don\'t use special characters',
         ),
         const SizedBox(height: 40),
         CustomTextField(
           controller: passwordController,
-          label: "Şifre",
-          hint: "Şifrenizi girin",
+          label: "Password",
+          hint: "Please enter your password",
           prefixIcon: const Icon(Icons.lock),
           suffixIcon: const Icon(Icons.visibility),
-          helperText: 'En az 8 karakter olmalı',
+          helperText: 'Minimum 6 characters',
         ),
         const SizedBox(height: 40),
         ElevatedButton(
           onPressed: () async {
             try {
-              await authController.register(emailController.text, passwordController.text);
+              await authController.register(
+                  emailController.text, passwordController.text);
               ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text("Kayıt başarılı!")));
             } catch (e) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text(e.toString())));
+              ScaffoldMessenger.of(context)
+                  .showSnackBar(SnackBar(content: Text(e.toString())));
             }
           },
           style: ElevatedButton.styleFrom(
@@ -64,7 +65,7 @@ class _RegisterFormState extends State<RegisterForm> {
             padding: const EdgeInsets.symmetric(vertical: 16.0),
             minimumSize: const Size(double.infinity, 50),
           ),
-          child: const Text("Kayıt Ol"),
+          child: const Text("Register"),
         ),
       ],
     );

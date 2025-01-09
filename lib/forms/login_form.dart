@@ -8,7 +8,6 @@ class LoginForm extends StatefulWidget {
 
   const LoginForm({super.key, required this.onLoginSuccess});
 
-
   @override
   State<LoginForm> createState() => _LoginFormState();
 }
@@ -29,34 +28,35 @@ class _LoginFormState extends State<LoginForm> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const CustomTitle(title: "Giriş Bölgesi"),
+        const CustomTitle(title: "Login"),
         const SizedBox(height: 40),
         CustomTextField(
           controller: emailController,
           label: "E-posta",
-          hint: "E-posta adresinizi giriniz",
+          hint: "Please enter your email",
           prefixIcon: const Icon(Icons.text_fields),
           suffixIcon: const Icon(Icons.clear),
-          helperText: 'Özel karakter kullanmayın',
+          helperText: 'Don\'t use special characters',
         ),
         const SizedBox(height: 40),
         CustomTextField(
           controller: passwordController,
-          label: "Şifre",
-          hint: "Şifrenizi girin",
+          label: "Password",
+          hint: "Please enter your password",
           prefixIcon: const Icon(Icons.lock),
           suffixIcon: const Icon(Icons.visibility),
-          helperText: 'En az 8 karakter olmalı',
+          helperText: 'Minimum 6 characters',
         ),
         const SizedBox(height: 40),
         ElevatedButton(
           onPressed: () async {
             try {
-              await authController.login(emailController.text, passwordController.text);
+              await authController.login(
+                  emailController.text, passwordController.text);
               widget.onLoginSuccess(); // Giriş başarılı olduğunda yönlendirme
             } catch (e) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text(e.toString())));
+              ScaffoldMessenger.of(context)
+                  .showSnackBar(SnackBar(content: Text(e.toString())));
             }
           },
           style: ElevatedButton.styleFrom(
@@ -66,7 +66,7 @@ class _LoginFormState extends State<LoginForm> {
             padding: const EdgeInsets.symmetric(vertical: 16.0),
             minimumSize: const Size(double.infinity, 50),
           ),
-          child: const Text("Giriş Yap"),
+          child: const Text("login"),
         ),
       ],
     );
