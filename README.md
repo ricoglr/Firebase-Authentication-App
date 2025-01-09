@@ -1,8 +1,8 @@
 ## Screenshots
 
-| Login Screen                           | Registration Screen                          |
+| Login Screen                           | Home Screen                          |
 |----------------------------------------|---------------------------------------------|
-| ![Login Screen1](assets/images/screenshot2.png) | ![Home Screen1](assets/images/screenshot.png)|
+| ![Login Screen1](assets/images/screenshot2.png) | ![Home Screen1](assets/images/screenshot.png) |
 
 
 
